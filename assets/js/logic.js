@@ -16,15 +16,15 @@ var timer;
 // Prepare all selector that we might need to point to the html element
 var startButton = document.querySelector('#start');
 // startScreenElement
-var startScreenElement = document.querySelector('start-screen')
+var startScreenElement = document.querySelector('#start-screen')
 // questionsContainer
 var  questionsContainer = document.querySelector('questons')
 // questionsTitle
-var questionTitle = document.querySelector('question-title')
+var questionTitle = document.querySelector('#question-title')
 // choicesContainer
-var choicesContainer =document.querySelector('choices')
+var choicesContainer =document.querySelector('#choices')
 // timerContainer
-var timerContainer = document.querySelector('timer')
+var timerContainer = document.querySelector('#timer')
 // ....
 
 function populateQuestion(question) {
