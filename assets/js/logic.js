@@ -6,19 +6,24 @@
 // The quiz should end when all questions are answered or the timer reaches 0.
 // When the game ends, it should display their score and give the user the ability to save their initials and their score
 
+import { questions } from "./question";
+
+//import { questions } from "./question";
+
 // Prepare the questions in question.js file
-// var questions = ...
+// var questions = 
+
 var score = 0;
 var currentQuestion = 0;
 var counter;
 var timer;
 
-// Prepare all selector that we might need to point to the html element
+// Prepare all selector that we m ight need to point to the html element
 var startButton = document.querySelector('#start');
 // startScreenElement
 var startScreenElement = document.querySelector('#start-screen')
 // questionsContainer
-var  questionsContainer = document.querySelector('questons')
+var  questionsContainer = document.querySelector('#questions')
 // questionsTitle
 var questionTitle = document.querySelector('#question-title')
 // choicesContainer
@@ -32,7 +37,7 @@ function populateQuestion(question) {
     var choices = question.choices;
 
     choicesContainer.innerHTML = '';
-    // questionTitle.textContent = question;
+    questionTitle.textContent = question;
     var choicesList = document.createElement('ul');
     for (let i = 0; i < choices.length; i++) {
         var choice = document.createElement('li');
@@ -41,6 +46,9 @@ function populateQuestion(question) {
     }
     // choicesContainer.appendChild(choicesList)
 }
+
+var me =populateQuestion(questions[1])
+ console.log(me)
 
 function endGame() {
     // When the game ends, it should display their score and give the user the ability to save their initials and their score
@@ -67,7 +75,8 @@ startButton.addEventListener('click', function() {
     // show the first question
     currentQuestion = 0;
     populateQuestion(questions[currentQuestion]);
-
+    //console.log(popul)
+    
     counter = 100;
     timer = setInterval(function() {
         counter--;

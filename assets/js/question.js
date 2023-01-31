@@ -11,3 +11,5 @@ var questions = [
         answer:"parentheses"
     }
 ]
+
+export {questions}
